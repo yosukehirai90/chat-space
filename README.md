@@ -6,9 +6,9 @@
 |name|string|index: true, null: false|
 
 ### Association
-- has_many :groups, through: :members
-- has_many :messages
 - has_many :members
+- has_many :messages
+- has_many :groups, through: :members
 
 ## groupテーブル
 
@@ -17,16 +17,16 @@
 |name|string|null: false, unique: true|
 
 ### Association
-- has_many :users, through: :members validates :name, presence :true
-- has_many :messages
 - has_many :members
+- has_many :messages
+- has_many :users, through: :members validates :name, presence :true
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|references|null: false|
+|group_id|references|null: false|
 |text|text|
 |image|text|
 
@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 
