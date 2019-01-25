@@ -3,8 +3,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|email|text|null: false|
+|name|string|index: true, null: false|
 
 ### Association
 - has_many :groups, through: :members
@@ -15,10 +14,10 @@
 
 |Column|Tyoe|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
-- has_many :users, through: :members
+- has_many :users, through: :members validates :name, presence :true
 - has_many :messages
 - has_many :members
 
