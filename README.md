@@ -25,8 +25,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|
-|group_id|references|null: false|
+|user|references|null: false|
+|group|references|null: false|
 |text|text|
 |image|text|
 
@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 
