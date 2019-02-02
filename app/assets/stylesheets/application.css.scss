@@ -1,0 +1,29 @@
+/*
+ *= require font-awesome
+ */
+
+@import "./reset";
+@import "config/variables";
+@import "mixin/basic";
+@import "modules/side-bar";
+@import "modules/main-header";
+@import "modules/main-form";
+@import "modules/main-chat";
+
+html, body, .wrapper, .side-bar, .main {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #38aef0;
+}
+
+.link-basic:link, .link-basic:visited {
+  color: #fff;
+  text-decoration: none;
+}
