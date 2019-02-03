@@ -8,3 +8,22 @@ $btn_color : #38aef0;
 $chat_background-color: #fafafa;
 $chat-text_color : #434a54;
 $form_background-color: #ddd;
+
+html, body, .wrapper, .side-bar, .main {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #38aef0;
+}
+
+.link-basic:link, .link-basic:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
