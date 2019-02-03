@@ -20,10 +20,10 @@
         .chat
           = render "message"
         .form
-        
           .input-box
             = text_field :body,:text, class: "input-box__text", placeholder: "type a message"
             = label_tag :image, class: "input-box__image" do
               = fa_icon("image")
             = file_field_tag :image, class: "input-box__file-send" 
           = submit_tag "Send", class: "form__send-btn"
+          
