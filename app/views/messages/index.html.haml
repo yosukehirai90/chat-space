@@ -1,0 +1,30 @@
+!!!
+%html{ lang: "ja" }
+  %head
+    %meta{ charset: "utf-8" }
+    = stylesheet_link_tag "application"
+  %body
+    .wrapper
+      = render "sidebar"
+      .main
+        .header
+          .group-info
+            %h2.group-info__group-name sampleグループ
+            %ul.members
+              %a
+                %li.members__member Member: seo neko
+              %li.members__member 
+          .edit-btn
+            %p.edit-btn__btn-text
+              = link_to "Edit", class: "edit-btn__btn-text--link"
+        .chat
+          = render "message"
+        .form
+          .input-box
+            = text_field :body,:text, class: "input-box__text", placeholder: "type a message"
+            = label_tag :image, class: "input-box__image" do
+              = fa_icon("image")
+            = file_field_tag :image, class: "input-box__file-send" 
+          = submit_tag "Send", class: "form__send-btn"
+
+          
