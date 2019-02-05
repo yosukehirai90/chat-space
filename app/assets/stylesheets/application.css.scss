@@ -5,6 +5,8 @@
 @import "./reset";
 @import "config/variables";
 @import "mixin/basic";
+@import "config/colors";
+@import "modules/flash";
 @import "modules/side-bar";
 @import "modules/main-header";
 @import "modules/main-form";
