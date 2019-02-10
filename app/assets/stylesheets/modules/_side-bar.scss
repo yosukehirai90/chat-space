@@ -1,4 +1,5 @@
 .side-bar {
+  box-sizing: border-box;
   float: left;
   .header {
     @include div_basic($side-bar_width, $header_height, #253141);
@@ -18,7 +19,7 @@
       }
       &__edit {
         float: right;
-        margin-left: 10px;
+        margin-right: 10px;
       }
     }
   }
@@ -29,6 +30,9 @@
     overflow: scroll;
     .group {
       padding: 20px;
+      a:link, a:visited {
+        color: white;
+      }
       &__group-log {
       font-size: 11px;
       margin-top: 5px;

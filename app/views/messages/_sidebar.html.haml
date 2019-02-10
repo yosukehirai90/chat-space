@@ -1,17 +1,19 @@
 .side-bar
   .header
-    %h2.header__user-name yousukehirai
+    %h2.header__user-name
+      = current_user.name
     %ul.edit-list
-      %li.edit-list__new
-        = fa_icon("edit")
       %li.edit-list__edit
-        = fa_icon("gear")
+        = link_to edit_user_path(current_user), class: "link-basic" do
+          = fa_icon("gear")
+      %li.edit-list__new
+        = link_to new_group_path(current_user), class: "link-basic" do
+          = fa_icon("edit")
   .groups
-    .group 
-      %h3.group__group-name sample
-      %p.group__group-log Goodbye World
-
-      %h3.group__group-name sampleグループ
-      %p.group__group-log まだメッセージがありません
-
-      
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          %h3.group__group-name
+            = group.name
+          %p.group__group-log
+            = "メッセージがまだありません。"
