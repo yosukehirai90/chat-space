@@ -14,7 +14,7 @@
       .members {
         margin-top: 15px;
         &__member {
-          @include font_basic(#999999, 2px);
+          @include font_basic(#999999);
           float: left;
         }
         &__member li {
