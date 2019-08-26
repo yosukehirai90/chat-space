@@ -1,10 +1,8 @@
 $(() => {
   function buildHTML(message) {
-    var image = ""
-    if (message.image.url) {
-      image = `<img src="${message.image.url}"
-        class="message__image"></div>`;
-    }
+
+    var image = message.image.url ? `<img src="${message.image.url}" class="message__image">`: "";
+
     var html = `<div class="message message_id="${message.message_id}">
                     <h3 class="message__name">${message.user_name}</h3>
                     <p class="message__date">${message.created_at}</p>
@@ -35,6 +33,7 @@ $(() => {
         scrollTop: $('.chat')[0].scrollHeight
       },200);
       $('input-box__field-send').val("");
+      $("form")[0].reset();
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
