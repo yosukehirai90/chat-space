@@ -27,8 +27,6 @@ $(() => {
     })
     .done(function(data) {
       $('.chat').append(buildHTML(data));
-      $('.input-box__text').val("");
-
       $('.chat').animate({
         scrollTop: $('.chat')[0].scrollHeight
       },200);
