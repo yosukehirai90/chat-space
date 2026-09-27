@@ -48,3 +48,7 @@
 
 
 * ...
+
+# ミニゲーム「ちいさな探検隊」
+ダンジョン探索型のターン制ローグライクゲーム（`public/dungeon/index.html`）。
+Railsサーバー起動中に `/dungeon/index.html` を開くか、HTMLファイルを直接ブラウザで開けば遊べます。
